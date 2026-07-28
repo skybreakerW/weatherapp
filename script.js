@@ -42,7 +42,7 @@ async function getWeather(lat, lon){
     const response2 = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,wind_speed_10m`)
     const data2 = await response2.json()
     console.log(data2)
-    h1.textContent = `${data2.current.temperature_2m} °C`
+    h1.textContent = `${data2.current.temperature_2m}°C`
     h2.textContent = `${value}`
     humid.textContent = `${data2.current.relative_humidity_2m}% Humidity`
     windSpeed.textContent = `${data2.current.wind_speed_10m}km/hr Wind`
