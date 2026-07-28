@@ -21,6 +21,7 @@ body{
 }
 
 .active{
+    /* border: 2px solid red; */
     display: block;
     height: 25vh;
     min-width: 500px;
@@ -34,6 +35,7 @@ body{
 
 
 h1{
+    font-size: 5.5rem;
     color: hsl(38, 93%, 90%);
 }
 
@@ -43,11 +45,13 @@ h2{
 
 h4{
     color: hsl(80, 2%, 30%);
-    line-height: 3rem;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
 }
 
 p{
-    color: hsl(80, 2%, 10%);
+    color: hsl(120, 97%, 14%);
+    font-size: 1.5rem;
 }
 
 
