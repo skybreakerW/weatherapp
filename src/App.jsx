@@ -9,6 +9,11 @@ function App() {
   const [speed, setSpeed] = useState()
   const [humid, setHumid] = useState()
  
+  const getWeather = async(lati,long) => {
+    const response2 = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lati}&longitude=${long}&current=temperature_2m,relative_humidity_2m,wind_speed_10m`)
+    const data2 = await response2.json()
+    console.log(data2)
+  }
 
   const getCoordinates = async () => {
     const response = await fetch(
@@ -28,6 +33,7 @@ function App() {
     console.log(`${long}`)
     console.log(`${loc}`)
     
+    getWeather(lati,long)
   }
 
   return (
