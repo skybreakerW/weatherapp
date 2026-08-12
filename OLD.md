@@ -60,8 +60,3 @@ function submit(){
 }
 
 getCoordinates(value)
-
-
-
-
-
