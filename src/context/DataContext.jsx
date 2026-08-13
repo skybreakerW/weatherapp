@@ -23,10 +23,6 @@ export const GeoData = (props) => {
     setHumid(data2.current.relative_humidity_2m)
     setHere(place)
     
-
-    console.log(data2.current.temperature_2m)
-
-
   }
 
   const geoData = async (locate) => {
@@ -40,9 +36,6 @@ export const GeoData = (props) => {
     const lati = await response.data[0].lat;
     const long = await response.data[0].lon;
     const place = await response.data[0].display_name;
-    
-   
-      console.log(response.data[0])
   
     weatherData(lati,long, place)
 
@@ -60,7 +53,6 @@ export const GeoData = (props) => {
     <div>
       <GeoDataContext.Provider value={contextValues}>
         {props.children}
-        <button onClick={geoData}>Get</button>
       </GeoDataContext.Provider>
     </div>
   )
